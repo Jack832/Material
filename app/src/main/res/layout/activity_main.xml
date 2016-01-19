@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Drawermain"
+
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.test4.zoom.MainActivity">
+    <include
+        android:id="@+id/intoolbar"
+        layout="@layout/app_bar">
+
+    </include>
+    <com.example.test4.zoom.Tabs.SlidingTabLayout
+           android:id="@+id/tabs"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+    </com.example.test4.zoom.Tabs.SlidingTabLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+   <fragment
+       android:layout_width="280dp"
+       android:layout_height="match_parent"
+       app:layout="@layout/fragment_navigationact"
+       android:layout_gravity="start"
+       android:name="com.example.test4.zoom.NavigationDrawerFragment"
+       tools:layout="@layout/fragment_navigationact"
+       android:id="@+id/navigation_drawer"
+       />
+
+
+
+
+</android.support.v4.widget.DrawerLayout>
